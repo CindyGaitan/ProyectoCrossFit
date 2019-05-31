@@ -32,7 +32,7 @@ namespace Ingenieria_de_Software_Proyecto_Final
 
         private void BtnIngresar_Click(object sender, EventArgs e)
         {
-            //String de conexion
+            //String de conexion  
             string connString = "Server=localhost;Port=3306;Database=mydb;Uid=root;password=Cr1st1an;";
             MySqlConnection conn = new MySqlConnection(connString);
             MySqlCommand command = conn.CreateCommand();
