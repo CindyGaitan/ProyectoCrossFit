@@ -42,7 +42,7 @@ namespace Ingenieria_de_Software_Proyecto_Final
             MySqlDataReader reader = command.ExecuteReader();
 
 
-            if (reader.Read()) //Si el usuario es correcto nos abrira la otra ventana.
+            if (reader.Read()) //Si el usuario es competidor correcto nos abrira la otra ventana.
             {
                 conn.Close(); 
                 this.Hide();
@@ -56,7 +56,7 @@ namespace Ingenieria_de_Software_Proyecto_Final
 
                 command.CommandText = "SELECT * FROM jefebox WHERE apodo='" + TxtUsuario.Text + "' AND contraseña='" + TxtContrasenia.Text + "' ";
                 reader = command.ExecuteReader();
-                if (reader.Read())
+                if (reader.Read()) //si el usuario es jefe de box correcto nos dejara loguear
                 {
                     conn.Close();
                     this.Hide();
