@@ -9,12 +9,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
+
+//PRUEBA DE REPOSITORIO
 namespace Ingenieria_de_Software_Proyecto_Final
 {
-
+    
     public partial class FrmSignIn : Form
     {
-        
+        string var = "";
         public FrmSignIn()
         {
             InitializeComponent();

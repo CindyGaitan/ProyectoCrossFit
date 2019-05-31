@@ -32,7 +32,7 @@ namespace Ingenieria_de_Software_Proyecto_Final
 
         private void BtnIngresar_Click(object sender, EventArgs e)
         {
-            string connString = "Server=localhost;Port=3306;Database=mydb;Uid=root;password=Cr1st1an;";
+            string connString = "Server=localhost;Port=3306;Database=mydb;Uid=root;password='';";
             MySqlConnection conn = new MySqlConnection(connString);
             MySqlCommand command = conn.CreateCommand();
 
@@ -46,7 +46,7 @@ namespace Ingenieria_de_Software_Proyecto_Final
             {
                 conn.Close(); 
                 this.Hide();
-                FrmHome frmhome = new FrmHome();
+                Juezcs frmhome = new Juezcs();
                 frmhome.Show();
             }
             else 
@@ -60,7 +60,7 @@ namespace Ingenieria_de_Software_Proyecto_Final
                 {
                     conn.Close();
                     this.Hide();
-                    FrmHome frmhome = new FrmHome();
+                    Juezcs frmhome = new Juezcs();
                     frmhome.Show();
                 }
                 else
