@@ -24,10 +24,12 @@ namespace Ingenieria_de_Software_Proyecto_Final
 
         private void FrmSignIn_Load(object sender, EventArgs e)
         {
+            //String de conexion 
             string connString = "Server=localhost;Port=3306;Database=mydb;Uid=root;password=Cr1st1an;";
             MySqlConnection conn = new MySqlConnection(connString);
             MySqlCommand command = conn.CreateCommand();
 
+            //vaciar combo box
             CBPais.Items.Clear();
             CBPais.ResetText();
 
@@ -40,7 +42,7 @@ namespace Ingenieria_de_Software_Proyecto_Final
             try
             {
                 conn.Open();
-
+                //autollenado de ComboBox para pais y gimnasio para eleccion
                 command.CommandText = "select Id_Pais, Pais from paises";
                 MySqlDataReader reader = command.ExecuteReader();
 
@@ -82,6 +84,7 @@ namespace Ingenieria_de_Software_Proyecto_Final
 
         private void BtnRegistrar_Click(object sender, EventArgs e)
         {
+            //Registro de usuario con los usuarios y datos seleccionados
             string connString = "Server=localhost;Port=3306;Database=mydb;Uid=root;password=Cr1st1an;";
             MySqlConnection conn = new MySqlConnection(connString);
             MySqlCommand command = conn.CreateCommand();
